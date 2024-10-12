@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Description>Middlewares, Filters and several other routines used in all Pooshit Asp Net Core Services</Description>
+    <Version>0.6.0-preview</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyVersion>0.6.5</AssemblyVersion>
+    <PackageTags>Asp, Mvc, Middleware, Formatter</PackageTags>
+    <PackageVersion>0.6.5-preview</PackageVersion>
+    <Authors>Toni Gottschall</Authors>
+    <LangVersion>default</LangVersion>
+    <Company></Company>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
+    <PackageReference Include="Pooshit.Json" Version="0.3.7-preview" />
+  </ItemGroup>
+
+</Project>

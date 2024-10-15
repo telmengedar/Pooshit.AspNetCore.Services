@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="832b6c5f-c7d5-4950-9f59-5d24df9239d6" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "telmengedar"
+  }
+}]]></component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/telmengedar/Pooshit.AspNetCore.Services.git",
+    "accountId": "37d3ad7b-d78e-44f6-b364-b5a3ef673f81"
+  }
+}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/aspnetcore/b506e2cb7b6c0fe787305f8cfdee046b7b3f9a53/src/Mvc/Mvc.Abstractions/src/Formatters/InputFormatterResult.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Pooshit.AspNetCore.Services/Data/ListFilter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Pooshit.AspNetCore.Services/Data/PageFilter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Pooshit.AspNetCore.Services/Errors/Handlers/DataNotFoundHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Pooshit.AspNetCore.Services/Errors/Handlers/MissingScopeHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Pooshit.AspNetCore.Services/Errors/Handlers/NoClaimsHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Pooshit.AspNetCore.Services/Errors/Handlers/PropertyNotFoundHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Pooshit.AspNetCore.Services/Formatters/NCJsonInputFormatter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Pooshit.AspNetCore.Services/Formatters/NCJsonOutputFormatter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Pooshit.AspNetCore.Services/Middleware/MvcConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Pooshit.AspNetCore.Services/Patches/PatchOperation.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/NightlyCode.AspNetCore.Services/Formatters/StreamOutputFormatter.cs" />
+      <option value="$PROJECT_DIR$/NightlyCode.AspNetCore.Services/Formatters/NCJsonOutputFormatter.cs" />
+      <option value="$PROJECT_DIR$/NightlyCode.AspNetCore.Services/Formatters/StreamInputFormatter.cs" />
+      <option value="$PROJECT_DIR$/NightlyCode.AspNetCore.Services/BackgroundIntervalWorker.cs" />
+      <option value="$PROJECT_DIR$/NightlyCode.AspNetCore.Services/Patches/AllowPatchAttribute.cs" />
+      <option value="$PROJECT_DIR$/NightlyCode.AspNetCore.Services/Patches/Patch.cs" />
+      <option value="$PROJECT_DIR$/NightlyCode.AspNetCore.Services/Patches/PatchOperation.cs" />
+      <option value="$PROJECT_DIR$/NightlyCode.AspNetCore.Services/Data/ListFilter.cs" />
+      <option value="$PROJECT_DIR$/NightlyCode.AspNetCore.Services/Data/PageFilter.cs" />
+      <option value="$PROJECT_DIR$/NightlyCode.AspNetCore.Services/Middleware/MvcConfiguration.cs" />
+      <option value="$PROJECT_DIR$/NightlyCode.AspNetCore.Services/Formatters/HttpResponseOutputFormatter.cs" />
+    </changedPaths>
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="1koMc3Dq3NILSHSQZdWwtImmpEO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\Toni\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Toni\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\Toni\\AppData\\Local\\Symbols\\src"
+    ]
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="832b6c5f-c7d5-4950-9f59-5d24df9239d6" name="Default Changelist" comment="" />
+      <created>1606362567289</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606362567289</updated>
+      <workItem from="1606362598500" duration="890000" />
+      <workItem from="1607084502392" duration="1824000" />
+      <workItem from="1609755811172" duration="22512000" />
+      <workItem from="1610858940267" duration="2492000" />
+      <workItem from="1613394535395" duration="3765000" />
+      <workItem from="1613561118031" duration="2588000" />
+      <workItem from="1613860724000" duration="1212000" />
+      <workItem from="1614261821042" duration="1927000" />
+      <workItem from="1616076528306" duration="1972000" />
+      <workItem from="1616239831462" duration="1903000" />
+      <workItem from="1622346538339" duration="1954000" />
+      <workItem from="1643351105365" duration="656000" />
+      <workItem from="1643649451004" duration="645000" />
+      <workItem from="1644945505152" duration="876000" />
+      <workItem from="1645197230105" duration="1426000" />
+      <workItem from="1653056428546" duration="6832000" />
+      <workItem from="1653916053190" duration="1847000" />
+      <workItem from="1653989722145" duration="2290000" />
+      <workItem from="1675427746972" duration="745000" />
+      <workItem from="1675776158815" duration="2193000" />
+      <workItem from="1676120481193" duration="1557000" />
+      <workItem from="1685791540103" duration="1684000" />
+      <workItem from="1687720325180" duration="1565000" />
+      <workItem from="1688723562264" duration="4477000" />
+      <workItem from="1689169707857" duration="2591000" />
+      <workItem from="1690453102547" duration="3072000" />
+      <workItem from="1690896244934" duration="665000" />
+      <workItem from="1690898988928" duration="1922000" />
+      <workItem from="1692363697719" duration="622000" />
+      <workItem from="1693313358741" duration="747000" />
+      <workItem from="1694607735449" duration="606000" />
+      <workItem from="1694773368566" duration="2676000" />
+      <workItem from="1696342557586" duration="648000" />
+      <workItem from="1705841992386" duration="1897000" />
+      <workItem from="1707937035509" duration="666000" />
+      <workItem from="1710769628729" duration="3986000" />
+      <workItem from="1715789574742" duration="8371000" />
+      <workItem from="1716048329521" duration="17000" />
+      <workItem from="1716048384374" duration="1232000" />
+      <workItem from="1725298825288" duration="2415000" />
+      <workItem from="1725621111653" duration="3169000" />
+      <workItem from="1726668514318" duration="1093000" />
+      <workItem from="1727469437695" duration="847000" />
+      <workItem from="1728729855606" duration="2000" />
+      <workItem from="1728729978146" duration="2948000" />
+    </task>
+    <task id="LOCAL-00001" summary="Add initial project structure&#10;&#10;Created Docker, git, and IDE ignore files. Added base services, error handling, converters, CORS, background worker, and custom attributes. These additions form the foundational structure of the `Pooshit.AspNetCore.Services` project.">
+      <option name="closed" value="true" />
+      <created>1728732865194</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1728732865194</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Add initial project structure&#10;&#10;Created Docker, git, and IDE ignore files. Added base services, error handling, converters, CORS, background worker, and custom attributes. These additions form the foundational structure of the `Pooshit.AspNetCore.Services` project." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add initial project structure&#10;&#10;Created Docker, git, and IDE ignore files. Added base services, error handling, converters, CORS, background worker, and custom attributes. These additions form the foundational structure of the `Pooshit.AspNetCore.Services` project." />
+  </component>
+</project>

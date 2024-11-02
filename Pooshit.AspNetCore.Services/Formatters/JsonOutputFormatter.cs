@@ -8,12 +8,12 @@ namespace Pooshit.AspNetCore.Services.Formatters;
 /// <summary>
 /// output formatter for json using nightlycode json library which is hopefully faster than newtonsoft
 /// </summary>
-public class NCJsonOutputFormatter : OutputFormatter {
+public class JsonOutputFormatter : OutputFormatter {
         
     /// <summary>
-    /// creates a new <see cref="NCJsonOutputFormatter"/>
+    /// creates a new <see cref="JsonOutputFormatter"/>
     /// </summary>
-    public NCJsonOutputFormatter() {
+    public JsonOutputFormatter() {
         SupportedMediaTypes.Add("application/json");
         SupportedMediaTypes.Add("text/json");
         SupportedMediaTypes.Add("application/*+json");

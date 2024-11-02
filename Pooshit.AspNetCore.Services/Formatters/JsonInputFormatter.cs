@@ -8,12 +8,12 @@ namespace Pooshit.AspNetCore.Services.Formatters;
 /// <summary>
 /// input formatter using utf8-json to deserialize models
 /// </summary>
-public class NCJsonInputFormatter : InputFormatter {
+public class JsonInputFormatter : InputFormatter {
         
     /// <summary>
-    /// creates a new <see cref="NCJsonInputFormatter"/>
+    /// creates a new <see cref="JsonInputFormatter"/>
     /// </summary>
-    public NCJsonInputFormatter() {
+    public JsonInputFormatter() {
         SupportedMediaTypes.Add("application/json");
         SupportedMediaTypes.Add("text/json");
         SupportedMediaTypes.Add("application/*+json");

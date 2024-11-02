@@ -33,13 +33,13 @@ public class MvcConfiguration : IConfigureOptions<MvcOptions> {
         bool asyncjson = configuration["Json:Async"]?.ToLower() != "false";
         options.Filters.Add(new ValidateRequirementsAttribute(logger));
         options.InputFormatters.Add(new StreamInputFormatter());
-        options.InputFormatters.Add(new NCJsonInputFormatter {
+        options.InputFormatters.Add(new JsonInputFormatter {
                                                                  Async = asyncjson
                                                              });
 
         options.OutputFormatters.Add(new StreamOutputFormatter());
         options.OutputFormatters.Add(new HttpResponseOutputFormatter());
-        options.OutputFormatters.Add(new NCJsonOutputFormatter {
+        options.OutputFormatters.Add(new JsonOutputFormatter {
                                                                    Async = asyncjson
                                                                });
     }

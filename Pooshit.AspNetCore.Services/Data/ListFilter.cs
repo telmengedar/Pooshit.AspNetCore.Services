@@ -24,4 +24,10 @@ public class ListFilter : PageFilter {
     /// specifies fields to load
     /// </summary>
     public string[] Fields { get; set; }
+
+    /// <summary>
+    /// determines whether to randomize the list result
+    /// </summary>
+    /// <summary>used to get a set of samples, makes no sense to combine with paging operations</summary>
+    public bool? Randomize { get; set; }
 }

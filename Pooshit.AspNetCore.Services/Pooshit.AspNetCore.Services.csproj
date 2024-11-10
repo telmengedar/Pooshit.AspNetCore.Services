@@ -5,9 +5,9 @@
     <Description>Middlewares, Filters and several other routines used in all Pooshit Asp Net Core Services</Description>
     <Version>0.6.0-preview</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>0.6.7</AssemblyVersion>
+    <AssemblyVersion>0.6.8</AssemblyVersion>
     <PackageTags>Asp, Mvc, Middleware, Formatter</PackageTags>
-    <PackageVersion>0.6.7-preview</PackageVersion>
+    <PackageVersion>0.6.8-preview</PackageVersion>
     <Authors>Toni Gottschall</Authors>
     <LangVersion>default</LangVersion>
     <Company></Company>

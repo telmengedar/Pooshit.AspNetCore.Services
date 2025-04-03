@@ -30,8 +30,16 @@ public class ErrorHandlerCollection : IErrorHandlerCollection {
 
     /// <inheritdoc />
     public Task HandleError(Exception error, HttpResponse response, bool responseavailable) {
-        if(handlers.TryGetValue(error.GetType(), out IErrorHandler handler))
-            return handler.HandleError(error, response, responseavailable);
+        Type baseType = error.GetType();
+        while (typeof(Exception).IsAssignableFrom(baseType)) {
+            if (handlers.TryGetValue(error.GetType(), out IErrorHandler handler)) {
+                if (baseType != error.GetType())
+                    handlers[error.GetType()] = handler;
+                return handler.HandleError(error, response, responseavailable);
+            }
+
+            baseType = baseType.BaseType;
+        }
         return DefaultErrorHandler(error, response, responseavailable);
     }
 

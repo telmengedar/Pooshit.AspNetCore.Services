@@ -19,7 +19,17 @@ public static class Patch {
     /// operation used to remove a value from an array or delete a property value
     /// </summary>
     public const string Op_Remove = "remove";
-        
+
+    /// <summary>
+    /// operation used to remove a value from an array or delete a property value
+    /// </summary>
+    public const string Op_Flag = "flag";
+
+    /// <summary>
+    /// operation used to remove a value from an array or delete a property value
+    /// </summary>
+    public const string Op_Unflag = "unflag";
+
     /// <summary>
     /// creates a replace patch (set a value)
     /// </summary>
@@ -27,11 +37,11 @@ public static class Patch {
     /// <param name="value">value to set</param>
     /// <returns>patch operation to send to patch endpoints</returns>
     public static PatchOperation Replace(string property, object value) {
-        return new PatchOperation {
-                                      Op = "replace",
-                                      Path = $"/{property.ToLower()}",
-                                      Value = value
-                                  };
+	    return new() {
+		    Op = "replace",
+		    Path = $"/{property.ToLower()}",
+		    Value = value
+	    };
     }
         
     /// <summary>
@@ -41,11 +51,11 @@ public static class Patch {
     /// <param name="value">item or collection to add</param>
     /// <returns>patch operation to send to patch endpoints</returns>
     public static PatchOperation Add(string property, object value) {
-        return new PatchOperation {
-                                      Op = "add",
-                                      Path = $"/{property.ToLower()}",
-                                      Value = value
-                                  };
+	    return new() {
+		    Op = "add",
+		    Path = $"/{property.ToLower()}",
+		    Value = value
+	    };
     }
 
     /// <summary>
@@ -55,10 +65,38 @@ public static class Patch {
     /// <param name="value">item or collection to add</param>
     /// <returns>patch operation to send to patch endpoints</returns>
     public static PatchOperation Remove(string property, object value) {
-        return new PatchOperation {
-                                      Op = "remove",
-                                      Path = $"/{property.ToLower()}",
-                                      Value = value
-                                  };
+	    return new() {
+		    Op = "remove",
+		    Path = $"/{property.ToLower()}",
+		    Value = value
+	    };
+    }
+    
+    /// <summary>
+    /// sets a flag in a flag array
+    /// </summary>
+    /// <param name="property">path to flag property</param>
+    /// <param name="value">flag to set (should be an integer or enum)</param>
+    /// <returns>patch operation to send to patch endpoints</returns>
+    public static PatchOperation Flag(string property, object value) {
+	    return new() {
+		    Op = Op_Flag,
+		    Path = $"/{property.ToLower()}",
+		    Value = value
+	    };
+    }
+    
+    /// <summary>
+    /// clears a flag in a flag array
+    /// </summary>
+    /// <param name="property">path to flag property</param>
+    /// <param name="value">flag to clear (should be an integer or enum)</param>
+    /// <returns>patch operation to send to patch endpoints</returns>
+    public static PatchOperation Unflag(string property, object value) {
+	    return new() {
+		    Op = Op_Unflag,
+		    Path = $"/{property.ToLower()}",
+		    Value = value
+	    };
     }
 }

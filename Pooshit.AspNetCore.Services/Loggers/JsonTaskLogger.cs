@@ -11,9 +11,9 @@ namespace Pooshit.AspNetCore.Services.Loggers;
 /// logger for mamgo log output
 /// </summary>
 public class JsonTaskLogger : ILogger {
-    readonly Queue<Dictionary<string, object>> messages = new();
-    readonly object taskLock = new();
-    Task logTask;
+    static readonly Queue<Dictionary<string, object>> messages = new();
+    static readonly object taskLock = new();
+    static Task logTask;
     
     static readonly string[] levels = ["DEBUG", "DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL", "DEFAULT"];
     readonly string category;
@@ -26,7 +26,7 @@ public class JsonTaskLogger : ILogger {
         this.category = category.Split('.').LastOrDefault();
     }
 
-    Task LogTask() {
+    static Task LogTask() {
         while (true) {
             lock (taskLock) {
                 if (!messages.TryDequeue(out Dictionary<string, object> message)) {
@@ -39,7 +39,7 @@ public class JsonTaskLogger : ILogger {
         }
     }
 
-    void LogMessage(Dictionary<string, object> message) {
+    static void LogMessage(Dictionary<string, object> message) {
         lock (taskLock) {
             messages.Enqueue(message);
             logTask ??= LogTask();

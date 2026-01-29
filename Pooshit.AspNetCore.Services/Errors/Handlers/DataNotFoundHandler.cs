@@ -1,4 +1,5 @@
 ﻿using System.Net;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Pooshit.AspNetCore.Services.Errors.Exceptions;
@@ -26,7 +27,7 @@ public class DataNotFoundHandler : ErrorHandler<NotFoundException> {
     protected override HttpStatusCode HttpStatus(NotFoundException exception) => HttpStatusCode.NotFound;
 
     /// <inheritdoc />
-    protected override ErrorResponse GenerateResponse(NotFoundException exception, HttpContext context) {
-        return new(DefaultErrorCodes.DataEntityNotFound, exception.Message);
+    protected override Task<ErrorResponse> GenerateResponse(NotFoundException exception, HttpContext context) {
+        return Task.FromResult(new ErrorResponse(DefaultErrorCodes.DataEntityNotFound, exception.Message));
     }
 }

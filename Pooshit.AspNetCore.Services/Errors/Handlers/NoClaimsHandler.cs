@@ -1,4 +1,5 @@
 ﻿using System.Net;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Pooshit.AspNetCore.Services.Errors.Exceptions;
@@ -28,7 +29,7 @@ public class NoClaimsHandler : ErrorHandler<NoClaimsException> {
     protected override HttpStatusCode HttpStatus(NoClaimsException exception) => HttpStatusCode.Forbidden;
 
     /// <inheritdoc />
-    protected override ErrorResponse GenerateResponse(NoClaimsException exception, HttpContext context) {
-        return new(DefaultErrorCodes.InvalidToken, exception.Message);
+    protected override Task<ErrorResponse> GenerateResponse(NoClaimsException exception, HttpContext context) {
+        return Task.FromResult(new ErrorResponse(DefaultErrorCodes.InvalidToken, exception.Message));
     }
 }

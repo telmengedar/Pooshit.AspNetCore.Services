@@ -1,4 +1,5 @@
 ﻿using System.Net;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Pooshit.AspNetCore.Services.Errors.Exceptions;
@@ -23,8 +24,8 @@ namespace Pooshit.AspNetCore.Services.Errors.Handlers {
         protected override HttpStatusCode HttpStatus(MissingScopeException exception) => HttpStatusCode.Forbidden;
 
         /// <inheritdoc />
-        protected override ErrorResponse GenerateResponse(MissingScopeException exception, HttpContext context) {
-            return new(DefaultErrorCodes.MissingScope, exception.Message);
+        protected override Task<ErrorResponse> GenerateResponse(MissingScopeException exception, HttpContext context) {
+            return Task.FromResult(new ErrorResponse(DefaultErrorCodes.MissingScope, exception.Message));
         }
 
         /// <inheritdoc />

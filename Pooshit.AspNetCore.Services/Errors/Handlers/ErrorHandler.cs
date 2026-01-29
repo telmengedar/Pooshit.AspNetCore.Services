@@ -3,7 +3,6 @@ using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using Pooshit.AspNetCore.Services.Formatters;
 using Pooshit.Json;
 
 namespace Pooshit.AspNetCore.Services.Errors.Handlers;
@@ -38,11 +37,11 @@ public abstract class ErrorHandler<T> : IErrorHandler
     /// <param name="exception">exception for which to </param>
     /// <param name="context">http context for request in which error occured</param>
     /// <returns>error response sent to client</returns>
-    protected virtual ErrorResponse GenerateResponse(T exception, HttpContext context) {
-        return new() {
-                         Code = DefaultErrorCodes.Unhandled,
-                         Text = exception.Message
-                     };
+    protected virtual Task<ErrorResponse> GenerateResponse(T exception, HttpContext context) {
+        return Task.FromResult(new ErrorResponse {
+            Code = DefaultErrorCodes.Unhandled,
+            Text = exception.Message
+        });
     }
 
     /// <summary>
@@ -56,15 +55,13 @@ public abstract class ErrorHandler<T> : IErrorHandler
     }
 
     /// <inheritdoc />
-    public Task HandleError(Exception error, HttpResponse response, bool responseavailable) {
+    public async Task HandleError(Exception error, HttpResponse response, bool responseavailable) {
         LogError(logger, (T) error, response.HttpContext);
 
         if (responseavailable) {
             response.StatusCode = (int)HttpStatus((T)error);
             response.ContentType = "application/json";
-            return Json.Json.WriteAsync(GenerateResponse((T) error, response.HttpContext), response.Body, JsonOptions.RestApi);
+            await Json.Json.WriteAsync(await GenerateResponse((T) error, response.HttpContext), response.Body, JsonOptions.RestApi);
         }
-
-        return Task.CompletedTask;
     }
 }

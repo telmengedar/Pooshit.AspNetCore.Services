@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.Extensions.Logging;
@@ -20,11 +21,11 @@ public class OOMExceptionHandler : ErrorHandler<OutOfMemoryException> {
     public OOMExceptionHandler(ILogger<OOMExceptionHandler> logger) : base(logger) { }
 
     /// <inheritdoc />
-    protected override ErrorResponse GenerateResponse(OutOfMemoryException exception, HttpContext context) {
-        return new() {
-                         Code = "system_oom",
-                         Text = "Out of Memory"
-                     };
+    protected override Task<ErrorResponse> GenerateResponse(OutOfMemoryException exception, HttpContext context) {
+        return Task.FromResult(new ErrorResponse {
+            Code = "system_oom",
+            Text = "Out of Memory"
+        });
     }
 
     /// <inheritdoc />

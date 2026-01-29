@@ -1,4 +1,5 @@
 ﻿using System.Net;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Pooshit.AspNetCore.Services.Errors.Exceptions;
@@ -26,7 +27,7 @@ public class PropertyNotFoundHandler : ErrorHandler<PropertyNotFoundException> {
     protected override HttpStatusCode HttpStatus(PropertyNotFoundException exception) => HttpStatusCode.NotFound;
 
     /// <inheritdoc />
-    protected override ErrorResponse GenerateResponse(PropertyNotFoundException exception, HttpContext context) {
-        return new(DefaultErrorCodes.DataPropertyNotFound, exception.Message);
+    protected override Task<ErrorResponse> GenerateResponse(PropertyNotFoundException exception, HttpContext context) {
+        return Task.FromResult(new ErrorResponse(DefaultErrorCodes.DataPropertyNotFound, exception.Message));
     }
 }

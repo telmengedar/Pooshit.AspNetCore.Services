@@ -32,7 +32,7 @@ public class ErrorHandlerCollection : IErrorHandlerCollection {
     public Task HandleError(Exception error, HttpResponse response, bool responseavailable) {
         Type baseType = error.GetType();
         while (typeof(Exception).IsAssignableFrom(baseType)) {
-            if (handlers.TryGetValue(error.GetType(), out IErrorHandler handler)) {
+            if (handlers.TryGetValue(baseType, out IErrorHandler handler)) {
                 if (baseType != error.GetType())
                     handlers[error.GetType()] = handler;
                 return handler.HandleError(error, response, responseavailable);

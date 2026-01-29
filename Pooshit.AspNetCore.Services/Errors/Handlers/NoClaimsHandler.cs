@@ -25,7 +25,7 @@ public class NoClaimsHandler : ErrorHandler<NoClaimsException> {
     }
 
     /// <inheritdoc />
-    protected override HttpStatusCode HttpStatus => HttpStatusCode.Forbidden;
+    protected override HttpStatusCode HttpStatus(NoClaimsException exception) => HttpStatusCode.Forbidden;
 
     /// <inheritdoc />
     protected override ErrorResponse GenerateResponse(NoClaimsException exception, HttpContext context) {

@@ -30,7 +30,7 @@ public abstract class ErrorHandler<T> : IErrorHandler
     /// <summary>
     /// status code written to the response
     /// </summary>
-    protected abstract HttpStatusCode HttpStatus { get; }
+    protected abstract HttpStatusCode HttpStatus(T exception);
         
     /// <summary>
     /// generates a error response using exception and http context
@@ -60,7 +60,7 @@ public abstract class ErrorHandler<T> : IErrorHandler
         LogError(logger, (T) error, response.HttpContext);
 
         if (responseavailable) {
-            response.StatusCode = (int) HttpStatus;
+            response.StatusCode = (int)HttpStatus((T)error);
             response.ContentType = "application/json";
             return Json.Json.WriteAsync(GenerateResponse((T) error, response.HttpContext), response.Body, JsonOptions.RestApi);
         }

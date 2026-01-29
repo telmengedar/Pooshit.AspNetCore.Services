@@ -20,7 +20,7 @@ namespace Pooshit.AspNetCore.Services.Errors.Handlers {
         }
 
         /// <inheritdoc />
-        protected override HttpStatusCode HttpStatus => HttpStatusCode.Forbidden;
+        protected override HttpStatusCode HttpStatus(MissingScopeException exception) => HttpStatusCode.Forbidden;
 
         /// <inheritdoc />
         protected override ErrorResponse GenerateResponse(MissingScopeException exception, HttpContext context) {

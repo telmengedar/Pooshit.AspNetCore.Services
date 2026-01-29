@@ -23,7 +23,7 @@ public class DataNotFoundHandler : ErrorHandler<NotFoundException> {
     }
 
     /// <inheritdoc />
-    protected override HttpStatusCode HttpStatus => HttpStatusCode.NotFound;
+    protected override HttpStatusCode HttpStatus(NotFoundException exception) => HttpStatusCode.NotFound;
 
     /// <inheritdoc />
     protected override ErrorResponse GenerateResponse(NotFoundException exception, HttpContext context) {

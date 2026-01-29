@@ -28,17 +28,17 @@ public class OOMExceptionHandler : ErrorHandler<OutOfMemoryException> {
     }
 
     /// <inheritdoc />
-    protected override HttpStatusCode HttpStatus => HttpStatusCode.InternalServerError;
+    protected override HttpStatusCode HttpStatus(OutOfMemoryException exception) => HttpStatusCode.InternalServerError;
 
     /// <inheritdoc />
     protected override void LogError(ILogger errorlogger, OutOfMemoryException error, HttpContext context) {
         errorlogger.LogCritical(new LogException("Out of Memory", error, new() {
-                                                                                   ["code"] = DefaultErrorCodes.OOM,
-                                                                                   ["text"] = "Out of Memory",
-                                                                                   ["context"] = new Dictionary<string, object> {
-                                                                                                                                    ["path"] = context.Request.GetDisplayUrl(),
-                                                                                                                                    ["stack"] = error.StackTrace
-                                                                                                                                }
-                                                                               }), "Out of Memory");
+            ["code"] = DefaultErrorCodes.OOM,
+            ["text"] = "Out of Memory",
+            ["context"] = new Dictionary<string, object> {
+                ["path"] = context.Request.GetDisplayUrl(),
+                ["stack"] = error.StackTrace
+            }
+        }), "Out of Memory");
     }
 }

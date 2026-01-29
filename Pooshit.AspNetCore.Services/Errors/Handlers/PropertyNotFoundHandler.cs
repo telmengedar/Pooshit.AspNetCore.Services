@@ -23,7 +23,7 @@ public class PropertyNotFoundHandler : ErrorHandler<PropertyNotFoundException> {
     }
 
     /// <inheritdoc />
-    protected override HttpStatusCode HttpStatus => HttpStatusCode.NotFound;
+    protected override HttpStatusCode HttpStatus(PropertyNotFoundException exception) => HttpStatusCode.NotFound;
 
     /// <inheritdoc />
     protected override ErrorResponse GenerateResponse(PropertyNotFoundException exception, HttpContext context) {

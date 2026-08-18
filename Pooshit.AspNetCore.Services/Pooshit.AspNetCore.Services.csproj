@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Description>Middlewares, Filters and several other routines used in all Pooshit Asp Net Core Services</Description>
     <!-- single version source: the publish workflow overrides this via -p:Version from the git tag -->
-    <Version>0.6.15-preview</Version>
+    <Version>0.6.17-preview</Version>
     <PackageTags>Asp, Mvc, Middleware, Formatter</PackageTags>
     <Authors>Toni Gottschall</Authors>
     <LangVersion>default</LangVersion>
@@ -19,7 +19,8 @@
   
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
-    <PackageReference Include="Pooshit.Json" Version="0.3.13-preview" />
+    <PackageReference Include="Pooshit.Json" Version="0.3.40-preview" />
+    <PackageReference Include="System.Linq.Async" Version="7.0.1" />
   </ItemGroup>
 
 </Project>

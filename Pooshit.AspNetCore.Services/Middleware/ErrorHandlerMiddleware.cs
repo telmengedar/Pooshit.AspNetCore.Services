@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Pooshit.AspNetCore.Services.Errors;
@@ -35,10 +36,10 @@ namespace Pooshit.AspNetCore.Services.Middleware {
                     e = e.InnerException ?? e;
 
                 if (!context.Response.HasStarted) {
-                    context.Response.Headers.Add("Access-Control-Allow-Origin", "*");
-                    context.Response.Headers.Add("Access-Control-Allow-Methods", "GET,POST,PUT,PATCH,DELETE,OPTIONS");
-                    context.Response.Headers.Add("Access-Control-Allow-Headers", "authorization,content-type");
-                    context.Response.Headers.Add("Access-Control-Max-Age", "30");
+                    context.Response.Headers.TryAdd("Access-Control-Allow-Origin", "*");
+                    context.Response.Headers.TryAdd("Access-Control-Allow-Methods", "GET,POST,PUT,PATCH,DELETE,OPTIONS");
+                    context.Response.Headers.TryAdd("Access-Control-Allow-Headers", "authorization,content-type");
+                    context.Response.Headers.TryAdd("Access-Control-Max-Age", "30");
                     
                 }
 

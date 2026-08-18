@@ -1,16 +1,16 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Description>Middlewares, Filters and several other routines used in all Pooshit Asp Net Core Services</Description>
-    <Version>0.6.0-preview</Version>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>0.6.15</AssemblyVersion>
+    <!-- single version source: the publish workflow overrides this via -p:Version from the git tag -->
+    <Version>0.6.15-preview</Version>
     <PackageTags>Asp, Mvc, Middleware, Formatter</PackageTags>
-    <PackageVersion>0.6.15-preview</PackageVersion>
     <Authors>Toni Gottschall</Authors>
     <LangVersion>default</LangVersion>
     <Company></Company>
+    <RepositoryUrl>https://github.com/telmengedar/Pooshit.AspNetCore.Services</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/telmengedar/Pooshit.AspNetCore.Services</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
